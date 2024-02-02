@@ -1,0 +1,65 @@
+﻿@model Workshop_1.DataBase.OwnerDataBase.userSet ;
+@{
+    ViewData["Title"] = "Home Page";
+}
+
+<div class="text-center">
+    <h1 class="display-4">خوش آمدید</h1>
+    <p>انتقال پول های خود را به ما بسپارید.</p>
+    <!-- Example split danger button -->
+    <h1>بخش انتقال پول</h1>
+    <div class="btn-group">
+        <h2>لطفا نام خود را انتخاب کنید</h2>
+        <button type="button" class="btn btn-danger">انتخاب نام</button>
+        <button type="button" class="btn btn-danger dropdown-toggle dropdown-toggle-split" data-bs-toggle="dropdown" aria-expanded="false">
+            <span class="visually-hidden">Toggle Dropdown</span><!--??????????????-->
+            
+        </button>
+        <ul class="dropdown-menu" method="Post">
+            <li><a class="dropdown-item" asp-action="Privacy" >jafar gholi</a></li>
+            <li><a class="dropdown-item" asp-action="Privacy">hassan gholi</a></li>
+            <li><a class="dropdown-item" asp-action="Privacy">hosein gholie</a></li>
+            <li><a class="dropdown-item" asp-action="Privacy">reza gholi</a></li>
+            <li><a class="dropdown-item" asp-action="Privacy">nader gholi</a></li>
+            <li><a class="dropdown-item" asp-action="Privacy">gholi</a></li>
+        </ul>
+    </div>
+    <form class="border border-1 p-5" method="Post">
+        <div class="mb-3">
+            <label class="form-label" asp-for="Id"></label>
+            <input class="form-control" asp-for="Id" />
+        </div>
+        <div class="mb-3">
+            <label class="form-label" asp-for="Name"></label>
+            <input class="form-control" asp-for="Name" />
+        </div>
+        <div class="mb-3">
+            <label class="form-label" asp-for="Brand"></label>
+            <input class="form-control" asp-for="Brand" />
+        </div>
+        <div class="mb-3">
+            <label class="form-label" asp-for="Price"></label>
+            <input class="form-control" asp-for="Price" />
+        </div>
+        <input type="submit" class="btn btn-success" value="ذخیره" />
+        <a class="btn btn-outline-secondary" asp-controller="Product" asp-action="Index">بازگشت</a>
+    </form>
+    <h1>بخش خرید</h1>
+    <div class="btn-group">
+        <h2>لطفا نام خود را انتخاب کنید</h2>
+        <button type="button" class="btn btn-danger">انتخاب نام</button>
+        <button type="button" class="btn btn-danger dropdown-toggle dropdown-toggle-split" data-bs-toggle="dropdown" aria-expanded="false">
+            <span class="visually-hidden">Toggle Dropdown</span><!--??????????????-->
+
+        </button>
+        <ul class="dropdown-menu">
+            <li><a class="dropdown-item" asp-action="buy" >jafar gholi</a></li>
+            <li><a class="dropdown-item" asp-action="buy">hassan gholi</a></li>
+            <li><a class="dropdown-item" asp-action="buy">hosein gholie</a></li>
+            <li><a class="dropdown-item" asp-action="buy">reza gholi</a></li>
+            <li><a class="dropdown-item" asp-action="buy">nader gholi</a></li>
+            <li><a class="dropdown-item" asp-action="buy">gholi</a></li>
+
+        </ul>
+    </div>
+</div>
